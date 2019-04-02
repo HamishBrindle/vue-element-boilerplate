@@ -9,6 +9,7 @@ $slide-duration: 250ms;
 .fade-leave-active {
   opacity: 0;
 }
+
 .slide {
   transition: all $slide-duration cubic-bezier(0.55, 0, 0.1, 1);    
   position: absolute;
