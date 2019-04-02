@@ -1,4 +1,4 @@
-# vue-cli-boilerplate
+# vue-element-boilerplate
 
 ## Project setup
 ```
