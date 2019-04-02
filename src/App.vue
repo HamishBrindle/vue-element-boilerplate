@@ -1,29 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <img alt="Vue logo" src="@/assets/logo.png">
+    <ul class="nav">
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <router-link to="/parent">Parent</router-link>
+      </li>
+      <li>
+        <router-link to="/parent/foo">Parent/foo</router-link>
+      </li>
+      <li>
+        <router-link to="/parent/bar">Parent/bar</router-link>
+      </li>
+    </ul>
+    <el-container>
+      <el-main>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'app',
+};
+</script>
+
 <style lang="scss">
+@import "assets/styles/settings.scss";
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    list-style: none;
+    padding: 0.5rem;
   }
 }
+
 </style>
