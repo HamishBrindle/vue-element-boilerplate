@@ -7,6 +7,10 @@ import {
   Main,
   Row,
   Col,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
   Button,
 } from 'element-ui';
 import '@/assets/styles/vendor/_element-ui.scss';
@@ -19,3 +23,7 @@ Vue.use(Main);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Button);
+Vue.use(Menu);
+Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);

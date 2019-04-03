@@ -26,15 +26,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/index.vue'),
       children: [
         { path: '', name: 'parent', component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/Default.vue') },
-        { path: 'foo', component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/Foo.vue') },
-        { path: 'bar', component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/Bar.vue') },
+        { path: 'foo', name: 'parrent-foo', component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/Foo.vue') },
+        { path: 'bar', name: 'parrent-bar', component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent/Bar.vue') },
       ],
     },
-    // {
-    //   path: '*',
-    //   component: {
-    //     template: '<div>Custom 404</div>',
-    //   },
-    // },
+    {
+      path: '*',
+      name: '404',
+      component: () => import(/* webpackChunkName: "notFound" */ '@/views/404.vue'),
+    },
   ],
 });

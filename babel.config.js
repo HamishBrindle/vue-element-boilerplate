@@ -3,13 +3,7 @@ module.exports = {
     '@vue/app',
   ],
   plugins: [
-    [
-      'component',
-      {
-        libraryName: 'element-ui',
-        styleLibraryName: 'theme-chalk',
-      },
-    ],
+    'wildcard', // For importing all files in a directory
   ],
   env: {
     test: {

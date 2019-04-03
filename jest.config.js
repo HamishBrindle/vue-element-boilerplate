@@ -1,8 +1,6 @@
 module.exports = {
   collectCoverage: false,
   collectCoverageFrom: ['src/**/*.{js,vue}'],
-  // globalSetup: './tests/config/setup-global.js',
-  // globalTeardown: './tests/config/teardown-global.js',
   moduleFileExtensions: [
     'js',
     'jsx',
@@ -13,7 +11,6 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^vue$': 'vue/dist/vue.common.js',
   },
-  preset: 'jest-puppeteer',
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
