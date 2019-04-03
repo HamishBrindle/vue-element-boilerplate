@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:report": "vue-cli-service build --analyze",
+    "serve": "vue-cli-service serve & yarn element:generate -w",
+    "build": "yarn element:generate && vue-cli-service build",
+    "build:report": "yarn element:generate && vue-cli-service build --analyze",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "test": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit",
+    "element:variables": "node_modules/.bin/et -i src/assets/styles/vendor/_element-ui.scss",
+    "element:generate": "node_modules/.bin/et -c src/assets/styles/vendor/_element-ui.scss -o src/assets/styles/themes/element-ui"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -36,7 +38,10 @@
     "babel-jest": "^23.6.0",
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-wildcard": "^5.0.0",
+    "before-build-webpack": "^0.2.8",
     "css-loader": "^2.1.1",
+    "element-theme": "^2.0.1",
+    "element-theme-chalk": "^2.7.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "jest-puppeteer": "^4.1.0",
