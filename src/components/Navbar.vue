@@ -25,8 +25,6 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log('key :', key);
-      console.log('keyPath :', keyPath);
       this.$router.push({ path: 'parent' });
     },
   },
@@ -35,6 +33,6 @@ export default {
 
 <style lang="scss">
 .m-navbar {
-  background: $colorPrimary !important;
+  background: map-get($map: $colors, $key: primary) !important;
 }
 </style>

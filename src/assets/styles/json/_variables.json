@@ -1,0 +1,21 @@
+{
+  "colors": {
+    "primary": "#162752",
+    "secondary": "#7F8FA4",
+    "warning": "#E6A23C",
+    "success": "#0F9D58",
+    "danger": "#DB4437",
+    "info": "#909399",
+    "wht": "#FFFFFF",
+    "blk": "#000000"
+  },
+  "breakpoints": {
+    "sm" : "768px",
+    "md" : "992px",
+    "lg" : "1200px",
+    "xl" : "1920px"
+  },
+  "fonts": {
+    "futura": "\"Futura-PT\""
+  } 
+}

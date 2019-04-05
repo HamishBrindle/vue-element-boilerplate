@@ -13,7 +13,6 @@ import {
   MenuItemGroup,
   Button,
 } from 'element-ui';
-import '@/assets/styles/vendor/_element-ui.scss';
 
 locale.use(lang);
 

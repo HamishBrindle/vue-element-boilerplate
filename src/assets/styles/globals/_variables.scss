@@ -1,0 +1,10 @@
+/**
+ * Global SCSS Variables
+ *
+ * Using Webpack to create a custom `get(key)` function,
+ * we now have access to styles set in `styles/json/_variables.json`
+ * to keep things more accessible app-wide. Any variables we
+ * set in the javascript will be both available in JS and SCSS.
+ *
+ */
+$colors: get('colors');

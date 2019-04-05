@@ -7,6 +7,10 @@
 </template>
 
 <script>
+import jsonVars from '@/assets/styles/json/_variables.json';
+
+console.log('jsonVars :', jsonVars);
+
 const defaultLayout = 'default';
 export default {
   name: 'app',

@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Element's generated CSS files
+src/assets/styles/vendor/element-ui/css
+src/assets/styles/vendor/element-ui/scss/generated
