@@ -4,6 +4,14 @@ const sassUtils = require('node-sass-utils')(sass);
 const sassVars = require('./src/assets/styles/json/_variables.json');
 
 module.exports = {
+  configureWebpack: {
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      compress: true,
+      port: 8118,
+      open: true,
+    },
+  },
   css: {
     loaderOptions: {
       sass: {

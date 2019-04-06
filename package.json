@@ -3,23 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "yarn element:generate -w & vue-cli-service serve",
-    "build": "yarn element:generate && vue-cli-service build",
+    "serve": "vue-cli-service serve & yarn element:generate -w",
+    "build": "yarn element:generate -m && vue-cli-service build",
     "build:report": "yarn element:generate && vue-cli-service build --analyze",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "test": "vue-cli-service test:unit",
     "element:variables": "node_modules/.bin/et -i src/assets/styles/vendor/_element-ui.scss",
-    "element:generate": "(kill -9 $(lsof -i:8888 -t) 2> /dev/null || true) && node_modules/.bin/et",
-    "gulp:styles": "node_modules/.bin/gulp jsToSass"
-  },
-  "element-theme": {
-    "out": "./src/assets/styles/vendor/element-ui/css",
-    "config": "./src/assets/styles/vendor/element-ui/scss/generated",
-    "sassVariables": "./src/assets/styles/vendor/element-ui/scss/_element-ui.scss",
-    "jsonVariables": "./src/assets/styles/json/_variables.json",
-    "minimize": false
+    "element:generate": "yarn element:kill && node_modules/.bin/et",
+    "element:kill": "(kill -9 $(lsof -i:8888 -t) 2> /dev/null || true)"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -48,7 +41,7 @@
     "babel-plugin-wildcard": "^5.0.0",
     "before-build-webpack": "^0.2.8",
     "css-loader": "^2.1.1",
-    "element-theme": "hamishbrindle/element-theme#master",
+    "element-theme": "hamishbrindle/element-theme-json#master",
     "element-theme-chalk": "^2.7.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
